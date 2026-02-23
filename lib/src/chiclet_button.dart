@@ -154,7 +154,7 @@ class ChicletButton extends StatelessWidget {
               ),
     );
     return Container(
-      width: !fitContent? chicletWidth:null,
+      width: fitContent == false? chicletWidth:null,
       height: (isPressed || isDisabled) ? height : height + buttonHeight,
       margin: EdgeInsets.only(
         top: (isPressed || isDisabled) ? buttonHeight : 0,
