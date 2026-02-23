@@ -117,7 +117,7 @@ class ChicletButton extends StatelessWidget {
       borderRadius:
           (_buttonPosition == null)
               ? buttonType == ButtonTypes.oval
-                  ? BorderRadius.all(Radius.elliptical(chicletWidth, height))
+                  ? BorderRadius.all(Radius.elliptical(height))
                   : BorderRadius.circular(
                     buttonType == ButtonTypes.roundedRectangle
                         ? borderRadius - 2
@@ -126,7 +126,7 @@ class ChicletButton extends StatelessWidget {
               : (_buttonPosition == ButtonPositions.start)
               ? buttonType == ButtonTypes.oval
                   ? BorderRadius.horizontal(
-                    left: Radius.elliptical(chicletWidth * 2, height),
+                    left: Radius.elliptical(height),
                   )
                   : BorderRadius.horizontal(
                     left: Radius.circular(
@@ -139,7 +139,7 @@ class ChicletButton extends StatelessWidget {
               ? BorderRadius.zero
               : buttonType == ButtonTypes.oval
               ? BorderRadius.horizontal(
-                right: Radius.elliptical(chicletWidth * 2, height),
+                right: Radius.elliptical(height),
               )
               : BorderRadius.horizontal(
                 right: Radius.circular(
@@ -176,12 +176,12 @@ class ChicletButton extends StatelessWidget {
         borderRadius:
             (_buttonPosition == null)
                 ? buttonType == ButtonTypes.oval
-                    ? BorderRadius.all(Radius.elliptical(chicletWidth, height))
+                    ? BorderRadius.all(Radius.elliptical(height))
                     : BorderRadius.circular(chicletBorderRadius)
                 : (_buttonPosition == ButtonPositions.start)
                 ? buttonType == ButtonTypes.oval
                     ? BorderRadius.horizontal(
-                      left: Radius.elliptical(chicletWidth * 2, height),
+                      left: Radius.elliptical(height),
                     )
                     : BorderRadius.horizontal(
                       left: Radius.circular(chicletBorderRadius),
@@ -190,7 +190,7 @@ class ChicletButton extends StatelessWidget {
                 ? BorderRadius.zero
                 : buttonType == ButtonTypes.oval
                 ? BorderRadius.horizontal(
-                  right: Radius.elliptical(chicletWidth * 2, height),
+                  right: Radius.elliptical(height),
                 )
                 : BorderRadius.horizontal(
                   right: Radius.circular(chicletBorderRadius),
