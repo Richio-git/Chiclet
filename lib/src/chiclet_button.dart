@@ -75,8 +75,6 @@ class ChicletButton extends StatelessWidget {
     this.onPressed,
     this.padding,
     this.width,
-    this.fitContent,
-
     this.height = 50,
     this.minimumSize,
     this.maximumSize,
