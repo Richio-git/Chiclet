@@ -10,6 +10,9 @@ class ChicletAnimatedButton extends StatefulWidget {
   /// Whether the button is currently pressed or not.
   final bool isPressed;
 
+    final bool fitContent;
+
+
   /// The width of the button.
   ///
   /// If not given, it will be the same as [height].
@@ -75,6 +78,8 @@ final double? width;
     this.minimumSize,
     this.maximumSize,
     this.isPressed = false,
+        this.fitContent = false,
+
     this.buttonHeight = 4,
     this.borderRadius = 16,
     this.buttonColor,
@@ -107,6 +112,7 @@ class _ChicletAnimatedButtonState extends State<ChicletAnimatedButton>
       child: ChicletButton(
         onPressed: !isDisabled ? _handleButtonPress : null,
         padding: widget.padding,
+        fitContent: widget.fitContent,
      width: widget.width,
         height: widget.height,
         minimumSize: widget.minimumSize,
