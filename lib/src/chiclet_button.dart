@@ -104,7 +104,8 @@ class ChicletButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDisabled = onPressed == null;
     final double chicletWidth =
-        buttonType == ButtonTypes.circle ? height : width ?? height;
+          buttonType == ButtonTypes.circle ? height : width;   
+    ///   buttonType == ButtonTypes.circle ? height : width ?? height;
     final double chicletBorderRadius =
         buttonType == ButtonTypes.roundedRectangle
             ? borderRadius > height / 2
