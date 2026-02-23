@@ -15,7 +15,7 @@ class ChicletButton extends StatelessWidget {
   /// The width of the button.
   ///
   /// If not given, it will be the same as [height].
-  final double? width;
+///  final double? width;
 
   /// The height of the button's surface.
   final double height;
@@ -103,7 +103,7 @@ class ChicletButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDisabled = onPressed == null;
-    final double chicletWidth = width;   
+   /// final double chicletWidth = width;   
     ///   buttonType == ButtonTypes.circle ? height : width ?? height;
     final double chicletBorderRadius =
         buttonType == ButtonTypes.roundedRectangle
@@ -150,7 +150,7 @@ class ChicletButton extends StatelessWidget {
               ),
     );
     return Container(
-      width: chicletWidth,
+    ///  width: chicletWidth,
       height: (isPressed || isDisabled) ? height : height + buttonHeight,
       margin: EdgeInsets.only(
         top: (isPressed || isDisabled) ? buttonHeight : 0,
