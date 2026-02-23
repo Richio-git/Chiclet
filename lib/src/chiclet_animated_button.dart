@@ -13,7 +13,7 @@ class ChicletAnimatedButton extends StatefulWidget {
   /// The width of the button.
   ///
   /// If not given, it will be the same as [height].
-///  final double? width;
+final double? width;
 
   /// The height of the button's surface.
   final double height;
@@ -70,7 +70,7 @@ class ChicletAnimatedButton extends StatefulWidget {
     super.key,
     this.onPressed,
     this.padding,
-   /// this.width,
+    this.width,
     this.height = 50,
     this.minimumSize,
     this.maximumSize,
@@ -107,7 +107,7 @@ class _ChicletAnimatedButtonState extends State<ChicletAnimatedButton>
       child: ChicletButton(
         onPressed: !isDisabled ? _handleButtonPress : null,
         padding: widget.padding,
-    ///    width: widget.width,
+     width: widget.width,
         height: widget.height,
         minimumSize: widget.minimumSize,
         maximumSize: widget.maximumSize,
