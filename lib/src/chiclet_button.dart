@@ -61,6 +61,7 @@ class ChicletButton extends StatelessWidget {
 
   /// Called when the button is tapped or otherwise activated.
   final VoidCallback? onPressed;
+  final bool? fitContent;
 
   /// The padding between the button's boundary and its child.
   final EdgeInsetsGeometry? padding;
@@ -74,9 +75,13 @@ class ChicletButton extends StatelessWidget {
     this.onPressed,
     this.padding,
     this.width,
+    this.fitContent,
+
     this.height = 50,
     this.minimumSize,
     this.maximumSize,
+    this.fitContent = false,
+
     this.isPressed = false,
     this.buttonHeight = 4,
     this.borderRadius = 16,
@@ -151,7 +156,7 @@ class ChicletButton extends StatelessWidget {
               ),
     );
     return Container(
-    ///  width: chicletWidth,
+    ///  width: !fitContent? chicletWidth:null,
       height: (isPressed || isDisabled) ? height : height + buttonHeight,
       margin: EdgeInsets.only(
         top: (isPressed || isDisabled) ? buttonHeight : 0,
